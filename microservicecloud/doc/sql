@@ -1,9 +1,39 @@
-CREATE TABLE dept
-( deptno BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  dname VARCHAR(60),
-  db_source VARCHAR(60)
-);
-INSERT INTO dept(dname,db_source) VALUES('开发部',DATABASE());
-INSERT INTO dept(dname,db_source) VALUES('人事部',DATABASE());
-INSERT INTO dept(dname,db_source) VALUES('财务部',DATABASE());
-INSERT INTO dept(dname,db_source) VALUES('市场部',DATABASE());
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`clouddb01` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `clouddb01`;
+DROP TABLE IF EXISTS `dept`;
+CREATE TABLE `dept` (
+  `deptno` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dname` varchar(60) DEFAULT NULL,
+  `db_source` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`deptno`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+insert  into `dept`(`deptno`,`dname`,`db_source`) values (1,'开发部','clouddb01'),(2,'人事部','clouddb01'),(3,'财务部','clouddb01'),(4,'市场部','clouddb01'),(5,'bigData2018','clouddb01');
+
+
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`clouddb02` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `clouddb02`;
+DROP TABLE IF EXISTS `dept`;
+CREATE TABLE `dept` (
+  `deptno` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `dname` VARCHAR(60) DEFAULT NULL,
+  `db_source` VARCHAR(60) DEFAULT NULL,
+  PRIMARY KEY (`deptno`)
+) ENGINE=INNODB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT  INTO `dept`(`deptno`,`dname`,`db_source`) VALUES (1,'开发部','clouddb02'),(2,'人事部','clouddb02'),(3,'财务部','clouddb02'),(4,'市场部','clouddb02'),(5,'bigData2018','clouddb02');
+
+
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`clouddb03` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `clouddb03`;
+DROP TABLE IF EXISTS `dept`;
+CREATE TABLE `dept` (
+  `deptno` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `dname` VARCHAR(60) DEFAULT NULL,
+  `db_source` VARCHAR(60) DEFAULT NULL,
+  PRIMARY KEY (`deptno`)
+) ENGINE=INNODB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT  INTO `dept`(`deptno`,`dname`,`db_source`) VALUES (1,'开发部','clouddb03'),(2,'人事部','clouddb03'),(3,'财务部','clouddb03'),(4,'市场部','clouddb03'),(5,'bigData2018','clouddb03');
