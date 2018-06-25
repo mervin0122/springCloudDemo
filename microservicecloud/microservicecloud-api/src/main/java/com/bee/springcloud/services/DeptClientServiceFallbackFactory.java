@@ -1,3 +1,4 @@
+/*
 package com.bee.springcloud.services;
 
 import com.bee.springcloud.entities.Dept;
@@ -5,7 +6,9 @@ import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+/**
+*Hystrix断路器—服务降级
+* /
 @Component // 不要忘记添加，不要忘记添加
 public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptClientService>
 {
@@ -39,3 +42,4 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
 		};
 	}
 }
+*/
